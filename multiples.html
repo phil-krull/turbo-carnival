@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Sum of Multiples</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function sumOfMultiples(num1, num2, maxValue) {
+      var sum = 0;
+      var LCM = num1 * num2;
+      for(var idx = 0; idx < maxValue; idx++) {
+        if(idx % num1 == 0) {
+          sum += idx;
+        } else if(idx % num2 == 0) {
+          sum += idx;
+        } else if(idx % LCM == 0) {
+          sum -= idx;
+        }
+      }
+      console.log(sum);
+    }
+  </script>
+</body>
+</html>
